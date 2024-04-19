@@ -1,5 +1,7 @@
 import Image from "next/image";
 import * as assets from "~/assets";
+import Checkbox from "./_components/Checkbox";
+import Button from "./_components/Button";
 
 export default function HomePage() {
   return (
@@ -34,25 +36,93 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="flex min-h-[100dvh] w-full flex-wrap items-center justify-center gap-2">
-        {[...Array(3).keys()].map((i) => (
+      <div className="flex min-h-[100dvh] w-full flex-wrap items-center justify-center gap-10 py-4  md:gap-2">
+        <div className="glass flex w-full flex-col items-center justify-start rounded-xl px-4 py-3 md:w-3/12">
           <div
-            key={i}
-            className="glass flex w-full flex-col items-center justify-start rounded-xl py-3 md:w-3/12"
+            className="rounded-xl bg-white px-4 py-2"
+            style={{
+              transform: "translateY(-65%)",
+            }}
           >
-            <div
-              className="rounded-xl bg-white px-4 py-2"
-              style={{
-                transform: "translateY(-65%)",
-              }}
-            >
-              <h1 className="text-3xl font-bold text-red-400">місяць</h1>
-            </div>
-
-            <h2 className="text-4xl font-bold">99 ₴</h2>
-            <p>перший платіж </p>
+            <h1 className="text-3xl font-bold text-red-400">місяць</h1>
           </div>
-        ))}
+
+          <h2 className="text-4xl font-bold">99₴</h2>
+          <p className="max-w-2/3">на місяць </p>
+
+          <div className="flex w-full flex-col gap-2 py-3">
+            <Checkbox
+              checkboxId="1"
+              label="ремонт або повернення 60% вартості пристрою"
+            />
+            <Checkbox
+              checkboxId="2"
+              label="діагностика пристрою"
+              checked={false}
+            />
+            <Checkbox
+              checkboxId="3"
+              label="продовженна гарантія після закінчення стандартної"
+              checked={false}
+            />
+          </div>
+          <Button link="/subscribe">Subscribe</Button>
+        </div>
+
+        <div className="glass flex w-full flex-col items-center justify-start rounded-xl px-4 py-3 md:w-3/12">
+          <div
+            className="rounded-xl bg-white px-4 py-2"
+            style={{
+              transform: "translateY(-65%)",
+            }}
+          >
+            <h1 className="text-3xl font-bold text-red-400">3 місяці</h1>
+          </div>
+
+          <h2 className="text-4xl font-bold">249₴</h2>
+          <p className="max-w-2/3">перший платіж, наступні по 99₴ на місяць</p>
+
+          <div className="flex w-full flex-col gap-2 py-3">
+            <Checkbox
+              checkboxId="1"
+              label="ремонт або повернення 60% вартості пристрою"
+            />
+            <Checkbox checkboxId="2" label="діагностика пристрою" />
+            <Checkbox
+              checkboxId="3"
+              label="продовженна гарантія після закінчення стандартної"
+              checked={false}
+            />
+          </div>
+          <Button link="/subscribe">Subscribe</Button>
+        </div>
+
+        <div className="glass flex w-full flex-col items-center justify-start rounded-xl px-4 py-3 md:w-3/12">
+          <div
+            className="rounded-xl bg-white px-4 py-2"
+            style={{
+              transform: "translateY(-65%)",
+            }}
+          >
+            <h1 className="text-3xl font-bold text-red-400">6 місяців</h1>
+          </div>
+
+          <h2 className="text-4xl font-bold">449₴</h2>
+          <p className="max-w-2/3">перший платіж, наступні по 99₴ на місяць</p>
+
+          <div className="flex w-full flex-col gap-2 py-3">
+            <Checkbox
+              checkboxId="1"
+              label="ремонт або повернення 60% вартості пристрою"
+            />
+            <Checkbox checkboxId="2" label="діагностика пристрою" />
+            <Checkbox
+              checkboxId="3"
+              label="продовженна гарантія після закінчення стандартної"
+            />
+          </div>
+          <Button link="/subscribe">Subscribe</Button>
+        </div>
       </div>
     </div>
   );
