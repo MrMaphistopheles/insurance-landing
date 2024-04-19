@@ -7,13 +7,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col items-center justify-center px-2">
       <div className="flex min-h-[100dvh] w-full flex-wrap items-center justify-center">
-        <Image
-          src={assets.phone}
-          priority
-          alt="cracked phone"
-          height={500}
-          style={{ transform: "rotate(-10deg)" }}
-        />
+        <Image src={assets.phone} priority alt="cracked phone" height={500} />
         <div className="flex w-full flex-col items-start justify-center gap-2 md:w-1/3">
           <h1 className="text-5xl font-bold">Захисти смартфон</h1>
           <p className="text-lg">
