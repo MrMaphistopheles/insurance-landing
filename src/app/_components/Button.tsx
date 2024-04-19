@@ -1,30 +1,35 @@
 import Link from "next/link";
+import React from "react";
 
 export default function Button({
   children,
   onClick,
   link,
   color,
+  py,
+  width,
+  font,
 }: {
-  children?: string;
+  children?: React.ReactNode;
   onClick?: () => void;
   link?: string;
   color?: string;
+  py?: number;
+  width?: string;
+  font?: string;
 }) {
   if (link) {
     return (
       <Link
-        className="flex items-center justify-center rounded-xl  px-4 py-2 text-lg font-bold text-white"
+        className="flex items-center justify-center rounded-xl  px-4 text-lg text-white"
         href={link}
-        style={
-          color !== undefined
-            ? {
-                backgroundColor: color,
-              }
-            : {
-                backgroundColor: "rgb(248, 113, 113, 1)",
-              }
-        }
+        style={{
+          backgroundColor: color ?? "rgb(248, 113, 113, 1)",
+          width: `${width}` ?? "auto",
+          paddingBottom: ` ${py}rem` ?? "0.25rem",
+          paddingTop: ` ${py}rem` ?? "0.25rem",
+          fontWeight: font ?? "bold",
+        }}
       >
         {children}
       </Link>
@@ -33,16 +38,14 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      style={
-        color !== undefined
-          ? {
-              backgroundColor: color,
-            }
-          : {
-              backgroundColor: "rgb(248, 113, 113, 1)",
-            }
-      }
-      className="flex items-center justify-center rounded-xl  px-4 py-2 text-lg font-bold text-white"
+      style={{
+        backgroundColor: color ?? "rgb(248, 113, 113, 1)",
+        width: `${width}` ?? "auto",
+        paddingBottom: ` ${py}rem` ?? "0.25rem",
+        paddingTop: ` ${py}rem` ?? "0.25rem",
+        fontWeight: font ?? "bold",
+      }}
+      className="flex items-center justify-center rounded-xl  px-4 text-lg text-white"
     >
       {children}
     </button>

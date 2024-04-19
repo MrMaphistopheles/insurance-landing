@@ -5,7 +5,7 @@ import Button from "./_components/Button";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center px-2">
       <div className="flex min-h-[100dvh] w-full flex-wrap items-center justify-center">
         <Image
           src={assets.phone}
@@ -36,7 +36,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="flex min-h-[100dvh] w-full flex-wrap items-center justify-center gap-10 py-4  md:gap-2">
+      <div className="flex min-h-[100dvh] w-full flex-wrap items-center justify-center gap-10 pb-10 pt-4  md:gap-2">
         <div className="glass flex w-full flex-col items-center justify-start rounded-xl px-4 py-3 md:w-3/12">
           <div
             className="rounded-xl bg-white px-4 py-2"
@@ -66,7 +66,9 @@ export default function HomePage() {
               checked={false}
             />
           </div>
-          <Button link="/subscribe">Subscribe</Button>
+          <Button link="/subscribe/99" py={0.35}>
+            Subscribe
+          </Button>
         </div>
 
         <div className="glass flex w-full flex-col items-center justify-start rounded-xl px-4 py-3 md:w-3/12">
@@ -94,7 +96,9 @@ export default function HomePage() {
               checked={false}
             />
           </div>
-          <Button link="/subscribe">Subscribe</Button>
+          <Button link="/subscribe/249" py={0.35}>
+            Subscribe
+          </Button>
         </div>
 
         <div className="glass flex w-full flex-col items-center justify-start rounded-xl px-4 py-3 md:w-3/12">
@@ -121,7 +125,9 @@ export default function HomePage() {
               label="продовженна гарантія після закінчення стандартної"
             />
           </div>
-          <Button link="/subscribe">Subscribe</Button>
+          <Button link="/subscribe/449" py={0.35}>
+            Subscribe
+          </Button>
         </div>
       </div>
     </div>

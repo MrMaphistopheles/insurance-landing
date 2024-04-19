@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body className={`font-sans ${inter.variable}`}>
-        <main className="flex min-h-[100dvh] flex-col items-center justify-start overflow-y-auto bg-[#4169E1] px-2 text-white">
+        <main className="flex min-h-[100dvh] flex-col items-center justify-start overflow-y-auto bg-[#4169E1] text-white">
           {children}
         </main>
       </body>
